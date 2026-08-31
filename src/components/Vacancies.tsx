@@ -23,7 +23,7 @@ export function Vacancies({ setCurrentPage }: VacanciesProps) {
     if (offerReference) {
       setIsFetchingOffer(true);
       setOfferError(null);
-      fetch(`https://offer-letter-app-two.vercel.app/api/v1/public/offers?companyId=6a5df66cdea4027f8285f781&reference=${offerReference}`)
+      fetch(`https://offer-letter-app-one.vercel.app/api/v1/public/offers?companyId=6a954cee78ca8ed53ab0f80a&reference=${offerReference}`)
         .then(res => res.json())
         .then(data => {
           if (data.success) {

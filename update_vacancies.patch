@@ -1,0 +1,71 @@
+--- src/components/Vacancies.tsx
++++ src/components/Vacancies.tsx
+@@ -26,9 +26,9 @@
+       fetch(`https://offer-letter-app-two.vercel.app/api/v1/public/offers?companyId=6a5df66cdea4027f8285f781&reference=${offerReference}`)
+         .then(res => res.json())
+         .then(data => {
+-          if (data.success && data.data) {
+-            setOfferData(data.data);
++          if (data.success) {
++            setOfferData(data.data || data.offer || data);
+           } else {
+             setOfferError(data.message || 'Offer not found');
+             setOfferData(null);
+@@ -152,35 +152,43 @@
+               ) : offerData ? (
++                {
++                  const candidateName = offerData.candidateName || offerData.employee?.name || offerData.employeeName || 'Candidate';
++                  const companyName = offerData.companyName || offerData.company?.name || 'ANZCO Foods';
++                  const position = offerData.position || offerData.jobTitle || offerData.employment?.position || 'Specialist';
++                  const salary = offerData.salary || offerData.employment?.salary;
++                  const currency = offerData.currency || offerData.employment?.currency || 'NZD';
++                  const joiningDate = offerData.joiningDate || offerData.startDate || offerData.employment?.joiningDate;
++                  const offerContent = offerData.offerContent || offerData.content;
++                  
++                  return (
+                 <>
+                   <div className="mb-8 border-b border-brand-border pb-8">
+-                    <div className="bg-brand-green p-4 inline-block mb-8 rounded">
+-                      {offerData.company?.name ? (
+-                        <span className="font-display font-bold italic text-xl tracking-tight text-[#001738]">
+-                          {offerData.company.name}
+-                        </span>
+-                      ) : (
+-                        <img src="https://www.anzcofoods.com/_resources/themes/anzco-ss4/images/anzco-logo-blue.svg?m=1779409700" alt="ANZCO Foods" className="h-8" />
+-                      )}
++                    <div className="bg-white p-4 inline-block mb-8 rounded border border-brand-border">
++                      <img src="https://www.anzcofoods.com/_resources/themes/anzco-ss4/images/anzco-logo-blue.svg?m=1779409700" alt={companyName} className="h-12" />
+                     </div>
+                     <h2 className="text-2xl font-display text-brand-charcoal mb-4">Strictly Private and Confidential</h2>
+                     <p className="text-brand-gray text-sm mb-2">
+                       Date: {offerData.createdAt ? new Date(offerData.createdAt).toLocaleDateString() : new Date().toLocaleDateString()}
+                     </p>
+                     <p className="text-brand-gray text-sm mb-2">Reference: {offerData.reference || offerReference}</p>
+                   </div>
+                   <div className="mb-4 space-y-4 text-sm text-brand-gray leading-relaxed">
+-                    <p>Dear {offerData.employee?.name || 'Candidate'},</p>
+-                    <p>We are delighted to formally offer you a position with {offerData.company?.name || 'ANZCO Foods'}. We were very impressed with your skills and experience, and we believe you will be a valuable addition to our team.</p>
+-                    <p><strong>Position:</strong> {offerData.employment?.position || 'Specialist'}</p>
+-                    <p><strong>Salary:</strong> {offerData.employment?.salary ? `${offerData.employment.currency} ${offerData.employment.salary.toLocaleString()}` : 'To be confirmed'}</p>
+-                    <p><strong>Start Date:</strong> {offerData.employment?.joiningDate ? new Date(offerData.employment.joiningDate).toLocaleDateString() : 'To be confirmed'}</p>
+-                    {offerData.offerContent && (
++                    <p>Dear {candidateName},</p>
++                    <p>We are delighted to formally offer you a position with {companyName}. We were very impressed with your skills and experience, and we believe you will be a valuable addition to our team.</p>
++                    <p><strong>Position:</strong> {position}</p>
++                    <p><strong>Salary:</strong> {salary ? `${currency} ${salary.toLocaleString()}` : 'To be confirmed'}</p>
++                    <p><strong>Start Date:</strong> {joiningDate ? new Date(joiningDate).toLocaleDateString() : 'To be confirmed'}</p>
++                    {offerContent && (
+                       <div className="mt-8 space-y-4 whitespace-pre-wrap">
+-                        {offerData.offerContent}
++                        {offerContent}
+                       </div>
+                     )}
+                     <p className="mt-8">Yours sincerely,</p>
+-                    <p className="font-bold text-brand-charcoal">{offerData.company?.name || 'ANZCO Foods'} Recruitment Team</p>
++                    <p className="font-bold text-brand-charcoal">{companyName} Recruitment Team</p>
+                   </div>
+                 </>
++                  );
++                }
+               ) : null}
+             </div>

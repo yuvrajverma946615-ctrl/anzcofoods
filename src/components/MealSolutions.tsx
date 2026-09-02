@@ -12,7 +12,7 @@ export function MealSolutions({ setCurrentPage }: MealSolutionsProps) {
       <section className="relative py-24 bg-brand-green border-b border-brand-green-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1920&auto=format&fit=crop"
+            src="/brands/angel-bay.webp"
             alt="ANZCO Foods Meal Solutions"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
@@ -80,13 +80,13 @@ export function MealSolutions({ setCurrentPage }: MealSolutionsProps) {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img 
-              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop" 
+              src="/brands/burger-patties.webp" 
               alt="Burger" 
               className="w-full h-64 object-cover"
               referrerPolicy="no-referrer"
             />
             <img 
-              src="https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=800&auto=format&fit=crop" 
+              src="/brands/angel-bay.webp" 
               alt="Meatballs" 
               className="w-full h-64 object-cover mt-8"
               referrerPolicy="no-referrer"

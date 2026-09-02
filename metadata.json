@@ -1,0 +1,6 @@
+{
+  "name": "ANZCO Foods",
+  "description": "Premium New Zealand beef and lamb exporter showcasing products, supply chain, and global reach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

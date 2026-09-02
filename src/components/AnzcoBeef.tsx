@@ -12,27 +12,27 @@ export function AnzcoBeef({ setCurrentPage }: AnzcoBeefProps) {
       <section className="relative py-24 bg-brand-green border-b border-brand-green-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://plus.unsplash.com/premium_photo-1723672929404-36ba6ed8ab50?w=500&auto=format&fit=crop&q=60"
+            src="/brands/anzco-beef.webp"
             alt="ANZCO Foods New Zealand Beef"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
           />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-12 text-center text-brand-bg">
-          <button 
+          <button
             onClick={() => setCurrentPage('products')}
             className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/70 hover:text-white transition-colors mb-6 flex items-center justify-center gap-2 mx-auto"
           >
             <ChevronRight size={14} className="rotate-180" /> Back to Brands
           </button>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="font-display text-4xl md:text-5xl font-light italic mb-8"
           >
             ANZCO Foods New Zealand Beef
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -76,16 +76,10 @@ export function AnzcoBeef({ setCurrentPage }: AnzcoBeefProps) {
             </button>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img 
-              src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=500&auto=format&fit=crop&q=60" 
-              alt="Raw beef steak" 
+            <img
+              src="/brands/newzeland-beef.jpg"
+              alt="Raw beef steak"
               className="w-full h-64 object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1558030006-450675393462??q=80&w=800&auto=format&fit=crop" 
-              alt="Cooked beef steak" 
-              className="w-full h-64 object-cover mt-8"
               referrerPolicy="no-referrer"
             />
           </div>

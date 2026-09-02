@@ -12,7 +12,7 @@ export function Lamb({ setCurrentPage }: LambProps) {
       <section className="relative py-24 bg-brand-green border-b border-brand-green-dark overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1606850849319-58b6885b5e7d?q=80&w=1920&auto=format&fit=crop"
+            src="/brands/anzco-lamb.webp"
             alt="ANZCO Foods New Zealand Lamb"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
@@ -80,13 +80,13 @@ export function Lamb({ setCurrentPage }: LambProps) {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img 
-              src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800&auto=format&fit=crop" 
+              src="/brands/maimoa-lamb.webp" 
               alt="Raw lamb rack" 
               className="w-full h-64 object-cover"
               referrerPolicy="no-referrer"
             />
             <img 
-              src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=800&auto=format&fit=crop" 
+              src="/brands/anzco-lamb.webp" 
               alt="Cooked lamb dish" 
               className="w-full h-64 object-cover mt-8"
               referrerPolicy="no-referrer"

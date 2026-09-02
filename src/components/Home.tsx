@@ -25,7 +25,7 @@ export function Home({ setCurrentPage }: HomeProps) {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl text-white"
           >
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -33,7 +33,7 @@ export function Home({ setCurrentPage }: HomeProps) {
             >
               Bringing New Zealand's finest to the world.
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -41,7 +41,7 @@ export function Home({ setCurrentPage }: HomeProps) {
             >
               We procure, process and market New Zealand's finest beef and lamb to the world, creating nutrition and health solutions that enhance lives.
             </motion.p>
-            <motion.button 
+            <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -97,7 +97,7 @@ export function Home({ setCurrentPage }: HomeProps) {
           </div>
           <div className="relative aspect-square md:aspect-auto md:h-[600px]">
             <div className="absolute inset-0 bg-brand-green/10 translate-x-6 translate-y-6"></div>
-            <img 
+            <img
               src="https://plus.unsplash.com/premium_photo-1668616816953-a02cd1a44027?q=80&w=800&auto=format&fit=crop"
               alt="Quality Beef"
               referrerPolicy="no-referrer"
@@ -148,8 +148,8 @@ export function Home({ setCurrentPage }: HomeProps) {
             <div className="group cursor-pointer" onClick={() => setCurrentPage('products')}>
               <div className="aspect-[4/3] overflow-hidden mb-8 relative">
                 <div className="absolute inset-0 bg-brand-charcoal/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=500&auto=format&fit=crop&q=60"
+                <img
+                  src="/brands/newzeland-oceanbeaf.png"
                   alt="Premium Brands"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -167,7 +167,7 @@ export function Home({ setCurrentPage }: HomeProps) {
             <div className="group cursor-pointer" onClick={() => setCurrentPage('sustainability')}>
               <div className="aspect-[4/3] overflow-hidden mb-8 relative">
                 <div className="absolute inset-0 bg-brand-charcoal/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
-                <img 
+                <img
                   src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&auto=format&fit=crop"
                   alt="Sustainability"
                   referrerPolicy="no-referrer"
@@ -186,7 +186,7 @@ export function Home({ setCurrentPage }: HomeProps) {
             <div className="group cursor-pointer" onClick={() => setCurrentPage('careers')}>
               <div className="aspect-[4/3] overflow-hidden mb-8 relative">
                 <div className="absolute inset-0 bg-brand-charcoal/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
-                <img 
+                <img
                   src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1920&auto=format&fit=crop"
                   alt="Careers"
                   referrerPolicy="no-referrer"
@@ -214,27 +214,27 @@ export function Home({ setCurrentPage }: HomeProps) {
               Explore the exceptional quality and beautiful marbling of our pasture-raised beef, crafted for the ultimate culinary experience.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1690983323238-0b91789e1b5a?q=80&w=854&auto=format&fit=crop"
+              <img
+                src="/brands/beyond-beef.jpg"
                 alt="Grass fed beef"
                 className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=500&auto=format&fit=crop&q=60"
+              <img
+                src="/brands/beef-brand.jpg"
                 alt="Ocean Beef"
                 className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
             </div>
             <div className="overflow-hidden col-span-2 md:col-span-1">
-              <img 
-                src="https://plus.unsplash.com/premium_photo-1723672929404-36ba6ed8ab50?w=500&auto=format&fit=crop&q=60"
+              <img
+                src="/brands/beef-broth.jpg"
                 alt="ANZCO Beef"
                 className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
